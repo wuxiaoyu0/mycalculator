@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+/* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li,
+/* list elements 列表元素 */
+pre,
+/* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea,
+/* form elements 表单元素 */
+th, td
+/* table elements 表格元素 */
+{
+  margin: 0;
+  padding: 0;
+}
+/** 设置默认字体 **/
+body, button, input, select, textarea
+/* for ie */
+{
+  font: 14px/1.5 tahoma, \5b8b\4f53, sans-serif, "微软雅黑";
+}
+/*去掉标题标签的默认样式*/
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+/* 将斜体扶正 */
+code, kbd, pre, samp {
+  font-family: courier new, courier, monospace;
+}
+/* 统一等宽字体 */
+small {
+  font-size: 12px;
+}
+/* 小于 12px 的中文很难阅读, 让 small 正常化 */
+/** 重置列表元素 **/
+ul, ol, li, dl, dt, dd {
+  list-style: none;
+}
+/** 重置文本格式元素 **/
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+sup {
+  vertical-align: text-top;
+}
+/* 重置, 减少对行高的影响 */
+sub {
+  vertical-align: text-bottom;
+}
+/** 重置表单元素 **/
+legend {
+  color: #000;
+}
+/* for ie6 */
+fieldset, img {
+  border: 0;
+}
+/* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea {
+  font-size: 100%;
+}
+/* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+/** 重置表格元素 **/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* 重置 HTML5 元素 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+mark {
+  background: #ff0;
+}
+/*去除可置换元素在一些浏览器中存在的bug*/
+img, input, textarea, select, option, button {
+  display: block;
+}
+/*浮动以及清除浮动*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+.clear {
+  zoom: 1
+}
+
+/*计算器主框架的样式*/
+.calculator {
+  width: 482px;
+  background: #fff;
+  margin: 30px auto;
+}
+.calShow {
+  width: 100%;
+  height: 150px;
+  line-height: 150px;
+  text-align: right;
+  font-size: 70px;
+  background: #f7f7f7;
+  padding:10px;
+  overflow: hidden;
+}
+.calculateBox {
+  width: 100%;
+  border:1px solid #dadada;
+  border-top: none;
+  font-size: 35px;
+  color:#fff;
+}
+.calculateBox li{
+  width:120px;
+  height:115px;
+  line-height: 115px;
+  text-align: center;
+  background: #171717;
+  border-right:1px solid #dadada;
+  border-top:1px solid #dadada;
+  cursor: pointer;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  /*
+    Introduced in IE 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+}
+.calculateBox li:nth-child(4n){
+  border-right:none;
+}
+.calculateBox li.cBtn{
+  background: #ffa800;
+}
+.calculateBox li.cBtn:last-child{
+  background: #171717;
+}
+.calculateBox li.cBtn:nth-child(15){
+  background: #171717;
+}
